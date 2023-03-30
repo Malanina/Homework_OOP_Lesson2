@@ -1,8 +1,8 @@
 package task2;
 
- public class Cat extends Animal implements Fawn, Eat{
-        public Cat(String name, String color) {
-            super(name, color);
+ public class Cat extends Animal implements Fawn, Eat, Connect{
+        public Cat(String name, String color, int satiation) {
+            super(name, color, satiation);
         }
     
     
@@ -20,7 +20,9 @@ package task2;
         public void voice() {
             System.out.println("Говорит: мяу");
         }
+        @Override
+        public void play() {
+            System.out.println("Играет с человеком");
+        }
 
-    }
-               
-    
+    }       

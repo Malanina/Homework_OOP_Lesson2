@@ -1,13 +1,24 @@
 package task2;
 
-public abstract class Animal{
+public abstract class Animal implements Comparable<Animal>{
     private String name;
     private String color;
+    private int satiation;
 
 
-    public Animal(String name, String color) {
+    public int getSatiation() {
+        return satiation;
+    }
+
+    public int setSatiation(int satiation) {
+        this.satiation = satiation;
+        return satiation;
+    }
+
+    public Animal(String name, String color, int satiation) {
         this.name = name;
         this.color = color;
+        this.satiation = satiation;
     }
 
     public String getName() {
@@ -26,4 +37,9 @@ public abstract class Animal{
         this.color = color;
     }
 
+
+    @Override
+    public int compareTo(Animal o) {
+        return this.getSatiation() - o.getSatiation();
+    }
 }

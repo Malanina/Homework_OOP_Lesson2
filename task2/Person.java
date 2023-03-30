@@ -1,6 +1,6 @@
 package task2;
 
-public class Person implements Eat, Feed{
+public class Person implements Eat, Feed, Connect{
     private String name;
 
 
@@ -29,8 +29,13 @@ public class Person implements Eat, Feed{
     }
 
     @Override
-    public void voice() {
-        System.out.println("Позвал кошку: кис кис");
+    public void play() {
+        System.out.println("Играет с кошкой");
     }
 
+    @Override
+    public void voice() {
+        System.out.println("Позвал кошку: кис кис");;
+    }
+    
 }
