@@ -1,5 +1,8 @@
 package task1;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
         
         public static void main(String[] args) {
@@ -37,6 +40,18 @@ public class Main {
 
         System.out.println(new Research(gt).allRelationships(pavel));
         System.out.println(new Research(gt).findRelationships(ivan, Relationship.parent));
+
+        ArrayList<Person> list = new ArrayList<>();
+
+        list.add(galya);
+        list.add(tanya);
+        list.add(kate);
+        list.add(pavel);
+        list.add(ivan);
+
+        Collections.sort(list, new PersonAgeComporator());
+
+        System.out.println(list);
     }
 }
  
