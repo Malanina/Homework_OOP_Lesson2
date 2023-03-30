@@ -1,36 +1,36 @@
-package task2;
+package task1;
 
-public class Person implements Eat, Feed{
-    private String name;
+public class Person {
+    private String fullName;
+    private int age;
 
 
-
-    public Person(String name) {
-        this.name = name;
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
+    
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    @Override
-    public void eat() {
-        System.out.println("Кушает");
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     @Override
-    public void giveFood() {
-        System.out.println("Положил еду кошки в миску");
+    public String toString() {
+        return fullName;
     }
 
-    @Override
-    public void voice() {
-        System.out.println("Позвал кошку: кис кис");
+    public int getAge() {
+        return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
+
+
